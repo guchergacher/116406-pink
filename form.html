@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Пинк</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__wrapper">
+        <a class="header__logo-link">
+          <img src="img/pink-logo.svg" width="75" height="22" alt="Логотип Пинк">
+        </a>
+        <button class="header__button" type="button">
+          <span class="visually-hidden">Закрыть</span>
+        </button>
+        <nav class="header__nav">
+          <ul class="header__list">
+            <li class="header__item">
+              <a class="header__link" href="index.html">Главная</a>
+            </li>
+            <li class="header__item">
+              <a class="header__link" href="photo.html">Фотографии</a>
+            </li>
+            <li class="header__item">
+              <a class="header__link header__link--current">Конкурс</a>
+            </li>
+            <li class="header__item">
+              <a class="header__link" href="https://www.htmlacademy.ru">Html academy</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="content">
+      <div class="content__wrapper">
+        <h1>Конкурс на самое безбашенное путешествие с Пинк</h1>
+      </div>
+      <section class="registry">
+        <h2 class="visually-hidden">Регистрация</h2>
+        <p class="registry__text">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! Пожалуйста, заполните форму ниже:</p>
+        <ul class="registry__list">
+          <li>
+            <label class="registry__label" for="user-surname">Фамилия:</label>
+            <input class="registry__field" id="user-surname" type="text" name="user-surname" placeholder="Укажите фамилию *">
+          </li>
+          <li>
+            <label class="registry__label" for="user-name">Имя:</label>
+            <input class="registry__field" id="user-name" type="text" name="user-name" placeholder="Введите ваше имя *">
+          </li>
+          <li>
+            <label class="registry__label" for="user-patronymic">Отчество:</label>
+            <input class="registry__field" id="user-patronymic" type="text" name="user-patronymic" placeholder="Ну и отчество тоже">
+          </li>
+        </ul>
+      </section>
+      <section class="achievements">
+        <h2 class="visually-hidden">Достижения</h2>
+        <fieldset class="achievements__filter">
+          <legend class="achievements__title">Ваши безбашенные достижения в путешествии</legend>
+          <ul>
+            <li class="achievements__option">
+              <input class="visually-hidden form-achievements__field form-achievements__field--checkbox" id="achievements-shark" type="checkbox" name="shark" checked>
+              <label for="achievements-shark">Сделал селфи с акулой</label>
+            </li>
+            <li class="achievements__option">
+              <input class="visually-hidden form-achievements__field form-achievements__field--checkbox" id="achievements-sunbathe" type="checkbox" name="sunbathe" checked>
+              <label for="achievements-sunbathe">Обгорел на пляже</label>
+            </li>
+            <li class="achievements__option">
+              <input class="visually-hidden form-achievements__field form-achievements__field--checkbox" id="achievements-chack" type="checkbox" name="chack">
+              <label for="achievements-chack">Видел Чака Норриса</label>
+            </li>
+            <li class="achievements__option">
+              <input class="visually-hidden form-achievements__field form-achievements__field--checkbox" id="achievements-souvenir" type="checkbox" name="souvenir">
+              <label for="achievements-souvenir">Накупил сувениров</label>
+            </li>
+            <li class="achievements__option">
+              <input class="visually-hidden form-achievements__field form-achievements__field--checkbox" id="achievements-tower" type="checkbox" name="tower" checked>
+              <label for="achievements-tower">Удержал башню</label>
+            </li>
+            <li class="achievements__option">
+              <input class="visually-hidden form-achievements__field form-achievements__field--checkbox" id="achievements-hotel" type="checkbox" name="tower">
+              <label for="achievements-hotel">Разгромил отель</label>
+            </li>
+          </ul>
+        </fieldset>
+      </section>
+      <section class="contacts">
+        <ul class="contacts__list">
+          <li>
+            <label class="contacts__label" for="user-number">Номер телефона</label>
+            <input class="contacts__field" id="user-number" type="tel" name="user-number" placeholder="Номер,пожалуйста">
+          </li>
+          <li>
+            <label class="contacts__label" for="user-mail">Адрес почты</label>
+            <input class="contacts__field" id="user-mail" type="email" name="user-mail" placeholder="Введите почту*">
+          </li>
+        </ul>
+      </section>
+      <section class="application">
+        <h2 class="visually-hidden">Приложения</h2>
+        <fieldset class="application__filter filter">
+          <legend class="filter__title">С каким приложением путешествовали?</legend>
+          <ul>
+            <li class="filters__option">
+              <input class="visually-hidden application__filter application__filter--radio" id="filters-ios" type="radio" name="application-group" value="ios" checked>
+              <label for="filters-ios">Pink для iOS</label>
+            </li>
+            <li class="filters__option">
+              <input class="visually-hidden application__filter application__filter--radio" id="filters-android" type="radio" name="application-group" value="android">
+              <label for="filters-android">Pink на Android</label>
+            </li>
+            <li class="filters__option">
+              <input class="visually-hidden application__filter application__filter--radio" id="filters-windows" type="radio" name="application-group" value="windows">
+              <label for="filters-windows">Windows Phone</label>
+            </li>
+          </ul>
+        </fieldset>
+      </section>
+      <section class="comments">
+        <h2 class="visually-hidden">Комментарий</h2>
+          <div class="comments__area" tabindex="-1">
+            <div class="comments__wrapper">
+              <form class="comments__form comments-form" method="post" action="https://echo.htmlacademy.ru">
+                <ul class="comments-form__list">
+                  <li>
+                    <label class="comments-form__label" for="user-text">Опишите свои эмоции</label>
+                    <textarea class="comments-form__field" id="user-text" name="user-text" rows="5" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+                  </li>
+                </ul>
+                <button class="comments-form__button button" type="submit">Отправить форму</button>
+                <p class="comments-from__need">* — обязательные поля</p>
+              </form>
+      </section>
+      <footer class="footer">
+        <h2 class="visually-hidden">Cоциальных сети</h2>
+        <div class="footer__container container">
+          <a class="footer__logo-link" href="index.html">
+            <img src="img/pink-logo.svg" width="147" height="40" alt="Логотип Пинк">
+          </a>
+        </div>
+        <div class="footer social__wrapper">
+          <ul class="social__buttons">
+            <li class="social__item">
+              <a class="social__link social__link--twitter" href="#" target="_blank">
+                <span class="visually-hidden">Twitter</span>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--fb" href="#" target="_blank">
+                <span class="visually-hidden">Facebook</span>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--youtube" href="#" target="_blank">
+                <span class="visually-hidden">Youtube</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <a class="footer__develop" href="https://www.htmlacademy.ru">
+          Разработано
+          <img src="img/academy-logo.svg" width="27" height="34" alt="Логотип Академии">
+        </a>
+      </footer>
+    </main>
+  </body>
