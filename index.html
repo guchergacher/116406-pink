@@ -7,22 +7,22 @@
   <body>
     <header class="header">
       <div class="header__wrapper">
-        <a class="header__logo-link">
+        <a class="header__logo">
           <img src="img/pink-logo.svg" width="75" height="22" alt="Логотип Пинк">
         </a>
-        <button class="header__button" type="button">
-          <span class="visually-hidden">Закрыть</span>
-        </button>
         <nav class="header__nav">
+          <button class="header__button" type="button">
+            <span class="visually-hidden">Закрыть</span>
+          </button>
           <ul class="header__list">
             <li class="header__item">
-              <a class="header__link header__link--current">Главная</a>
+              <a class="header__link header__link--current" href="index.html">Главная</a>
             </li>
             <li class="header__item">
               <a class="header__link" href="photo.html">Фотографии</a>
             </li>
             <li class="header__item">
-              <a class="header__link" href="form.html">Конкурс</a>
+              <a class="header__link">Конкурс</a>
             </li>
             <li class="header__item">
               <a class="header__link" href="https://www.htmlacademy.ru">Html academy</a>
@@ -35,16 +35,22 @@
       <h1 class="visually-hidden">Пинк</h1>
       <section class="app">
         <h2 class="visually-hidden">Приложение</h2>
-        <a class="app__link" href="#">Скачать приложение</a>
+        <a class="app__link" href="https://www.apple.com" target="_blank">Скачать приложение</a>
         <ul class="app__support">
           <li class="app__item app__item--apple">
-            <span class="visually-hidden">Apple</span>
+            <a href="https://www.apple.com" target="_blank">
+              <span class="visually-hidden">Apple</span>
+            </a>
           </li>
           <li class="app__item app__item--android">
-            <span class="visually-hidden">Android</span>
+            <a href="https://play.google.com" target="_blank">
+              <span class="visually-hidden">Android</span>
+            </a>
           </li>
           <li class="app__item app__item--windows">
-            <span class="visually-hidden">Windows</span>
+            <a href="https://www.microsoft.com/ru-ru/store/b/home" target="_blank">
+              <span class="visually-hidden">Windows</span>
+            </a>
           </li>
         </ul>
         <p class="app__text">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
@@ -172,7 +178,7 @@
             <p class="contacts__text">ул. Большая Конюшенная, 19/8</p>
           </li>
         </ul>
-        <a class="contacts__wrapper" href="#">
+        <a class="contacts__wrapper" href="#" target="_blank">
           <img class="contacts__map" src="img/map.jpg" width="320" height="200" alt="Карта">
         </a>
       </section>
