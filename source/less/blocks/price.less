@@ -1,0 +1,55 @@
+.price {
+  background-color: @color-gray;
+  text-align: center;
+}
+
+.price__list {
+  .list-unstyled;
+}
+
+.price__info {
+  background-color: @color-default;
+  padding: 25px 0;
+}
+
+.price__title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.6;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.price__value {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 1.25;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.price__features {
+  .list-unstyled;
+
+  background-color: #ffffff;
+  border: 2px solid #e5e5e5;
+  text-align: left;
+}
+
+.price__add {
+  padding: 15px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.25;
+  text-transform: uppercase;
+
+  &:not(:last-child) {
+    border-bottom: 2px solid #e5e5e5;
+  }
+}
+
+.price__button {
+  .button-control(@color-gray);
+}
