@@ -1,6 +1,8 @@
 .social {
   .list-unstyled;
 
+  display: flex;
+  flex-wrap: wrap;
   margin-bottom: 34px;
 }
 
@@ -24,5 +26,11 @@
   &--youtube {
     background: url("../img/icon-youtube.svg") no-repeat center center;
     background-size: 13px auto;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .social {
+    margin: 0;
   }
 }

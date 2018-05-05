@@ -1,3 +1,7 @@
+.upload__wrapper {
+  padding: 20px 0 40px;
+}
+
 .upload__list {
   .list-unstyled;
 }
@@ -44,5 +48,23 @@
   &--reset {
     border-color: #dddfe0;
     color: #e3e3e4;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .upload__wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 60px 0 55px;
+  }
+
+  .upload__list {
+    width: 275px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .upload__list {
+    width: 410px;
   }
 }
