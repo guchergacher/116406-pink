@@ -1,4 +1,5 @@
 .registry__text {
+  padding: 55px 0 60px;
   text-align: center;
   font-size: 14px;
   font-weight: 400;
@@ -48,4 +49,51 @@
 
 .registry__need-star {
   color: @color-pink;
+}
+
+@media (min-width: @tablet-width) {
+  .registry__text {
+    padding: 100px 0 80px;
+  }
+
+  .registry__group {
+    &:nth-child(2n) {
+      background-color: transparent;
+    }
+  }
+
+  .registry__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .registry__form {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 960px;
+    margin: 0 auto;
+    padding: 0 10px;
+  }
+
+  .registry__group {
+    width: 100%;
+
+    &:nth-child(1) {
+      order: -3;
+      width: 435px;
+    }
+
+    &:nth-child(3) {
+      order: -1;
+    }
+
+    &:nth-child(4) {
+      order: -2;
+      width: 435px;
+    }
+  }
 }
