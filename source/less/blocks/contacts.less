@@ -32,3 +32,25 @@
     color: inherit;
   }
 }
+
+@media (min-width: @tablet-width) {
+  .contacts__slogan {
+    margin-bottom: 57px;
+  }
+
+  .contacts__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .contacts__item {
+    width: 50%;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .contacts__item {
+    width: 33.3%;
+  }
+}

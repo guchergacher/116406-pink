@@ -34,11 +34,15 @@
     </header>
     <main class="content">
       <div class="content__title-wrapper">
-        <h1 class="content__title">Конкурс на самое безбашенное путешествие с Пинк</h1>
+        <div class="container">
+          <h1 class="content__title">Конкурс на самое безбашенное путешествие с Пинк</h1>
+        </div>
       </div>
       <section class="registry">
         <h2 class="visually-hidden">Регистрация</h2>
-        <p class="registry__text">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! Пожалуйста, заполните форму ниже:</p>
+        <div class="container">
+          <p class="registry__text">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! Пожалуйста, заполните форму ниже:</p>
+        </div>
         <form class="registry__form" action="https://echo.htmlacademy.ru" method="post">
           <fieldset class="registry__group">
             <legend class="registry__group-title visually-hidden">Ваши личные данные</legend>
@@ -88,12 +92,12 @@
           </fieldset>
           <fieldset class="registry__group">
             <legend class="registry__group-title visually-hidden">Ваши личные данные</legend>
-            <ul class="registry__list fields-list">
-              <li class="fields-list__item">
+            <ul class="registry__list fields-list fields-list--date">
+              <li class="fields-list__item fields-list__item--date">
                 <label class="fields-list__label" for="user-number">Номер телефона</label>
                 <input class="fields-list__field" id="user-number" type="tel" name="user-number" placeholder="Номер,пожалуйста">
               </li>
-              <li class="fields-list__item">
+              <li class="fields-list__item fields-list__item--date">
                 <label class="fields-list__label" for="user-mail">Адрес почты</label>
                 <input class="fields-list__field" id="user-mail" type="email" name="user-mail" placeholder="Введите почту *" required>
               </li>
@@ -125,15 +129,17 @@
               </li>
             </ul>
           </fieldset>
+          <div class="registry__wrapper container">
+            <button class="registry__button" type="submit">Отправить форму</button>
+            <p class="registry__need">
+              <span class="registry__need-star">*</span> — обязательные поля
+            </p>
+          </div>
         </form>
-        <button class="registry__button" type="submit">Отправить форму</button>
-        <p class="registry__need">
-          <span class="registry__need-star">*</span> — обязательные поля
-        </p>
       </section>
     </main>
     <footer class="footer">
-      <div class="footer__wrapper">
+      <div class="footer__wrapper container">
         <a class="footer__logo-link" href="index.html">
           <img src="img/logo-pink-blue-mobile.svg" width="147" height="40" alt="Логотип Пинк">
         </a>

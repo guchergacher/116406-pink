@@ -1,10 +1,24 @@
 .price {
   background-color: @color-gray;
   text-align: center;
+  padding: 91px 0 50px;
+  overflow: hidden;
 }
 
 .price__list {
   .list-unstyled;
+
+  display: flex;
+  justify-content: center;
+}
+
+.price__item {
+  flex-shrink: 0;
+  width: 280px;
+
+  &--title {
+    display: none;
+  }
 }
 
 .price__info {
@@ -52,4 +66,30 @@
 
 .price__button {
   .button-control(@color-gray);
+}
+
+@media (min-width: @tablet-width) {
+  .price {
+    padding: 90px 0 70px;
+  }
+
+  .price__item {
+    width: 25%;
+
+    &--title {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+  }
+
+  .price__add {
+    span {
+      display: none;
+    }
+  }
+
+  .price__buttons {
+    display: none;
+  }
 }

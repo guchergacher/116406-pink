@@ -1,19 +1,49 @@
 .review {
-  text-align: center;
   padding: 54px 0 74px;
+  text-align: center;
 }
 
 .review__list {
   .list-unstyled;
 }
 
+.review__item {
+  display: none;
+
+  &--show {
+    display: block;
+  }
+}
+
+.review__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
 .review__name {
+  display: block;
   font-size: 18px;
   font-weight: 700;
   color: #000000;
   text-transform: uppercase;
 }
 
+.review__info {
+  display: none;
+  text-align: center;
+}
+
 .review__button {
   .button-control(#ffffff);
+}
+
+@media (min-width: @tablet-width) {
+  .review__text-wrapper {
+    order: 1;
+  }
+
+  .review__info {
+    display: block;
+  }
 }
