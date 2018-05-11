@@ -1,9 +1,19 @@
 .app {
-  padding: 460px 0 35px;
-  background: url("../img/iphone-hand-mobile@1x.png") no-repeat center 176px, #1d2631 url("../img/bg-back-mobile@1x.jpg") no-repeat center top;
+  padding: 0 0 32px;
+  background-color: #1d2631;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 395px;
+    background: url("../img/iphone-hand-mobile@1x.png") no-repeat left bottom, url("../img/bg-back-mobile@1x.jpg") no-repeat center bottom;
+    background-size: auto, 100% auto;
+  }
 }
 
 .app__wrapper {
+  padding: 29px 0 0;
   text-align: center;
 }
 
@@ -13,29 +23,43 @@
   font-weight: 300;
   line-height: 1.25;
   color: #ffffff;
+  margin: 0 0 29px;
 }
 
 .app__link {
-  margin: 22px 0 32px;
-  display: inline-block;
-  padding: 20px 36px;
+  margin: 0 0 32px;
+  display: block;
+  padding: 14px 6px 18px;
   border: 3px solid #ffffff;
   border-radius: 30px;
   font-size: 18px;
   font-weight: 700;
   line-height: 1;
   color: #ffffff;
+  text-align: center;
 }
 
 .app__support {
   .list-unstyled;
 
   display: flex;
+  justify-content: center;
+  align-items: baseline;
   flex-wrap: wrap;
-  margin-bottom: 31px;
+  margin-bottom: 21px;
+}
+
+.app__item {
+  margin: 0 17px;
+
+  a,
+  img {
+    display: block;
+  }
 }
 
 .app__text {
+  margin: 0;
   font-size: 14px;
   font-weight: 300;
   line-height: 1.71;
@@ -44,22 +68,46 @@
 
 @media (min-width: @tablet-width) {
   .app {
-    padding: 120px 0 35px;
+    min-height: 620px;
+    padding: 0;
+    background: url("../img/iphone-hand-tablet@1x.png") no-repeat -20px bottom, #1d2631 url("../img/bg-back-tablet@1x.jpg") no-repeat center -110px;
+
+    &::before {
+      display: none;
+    }
   }
 
   .app__wrapper {
+    padding-top: 90px;
     width: 300px;
     text-align: left;
   }
 
   .app__slogan {
     display: block;
+    text-align: center;
+  }
+
+  .app__link {
+    margin-bottom: 45px;
+  }
+
+  .app__support {
+    margin-bottom: 34px;
+  }
+
+  .app__text {
+    font-size: 18px;
+    line-height: 1.5;
+    text-align: center;
   }
 }
 
 @media (min-width: @desktop-width) {
   .app {
+    min-height: 620px;
     padding: 120px 0 35px;
+    background: url("../img/iphone-hand-desktop@1x.png") no-repeat -20px bottom, #1d2631 url("../img/bg-back-desktop@1x.jpg") no-repeat center -110px;
   }
 
   .app__slogan {
