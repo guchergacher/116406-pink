@@ -55,7 +55,7 @@
 .price__add {
   padding: 20px 60px 22px 21px;
   font-size: 14px;
-  font-weight: 400;
+  font-weight: 300;
   line-height: 1.25;
   text-transform: uppercase;
 
@@ -117,5 +117,30 @@
 
   .price__buttons {
     display: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .price {
+    padding: 147px 0 95px;
+  }
+
+  .price__info {
+    padding: 17px 0 20px;
+  }
+
+  .price__title {
+    margin-bottom: 1px;
+    font-size: 18px;
+  }
+
+  .price__value {
+    font-size: 24px;
+  }
+
+  .price__add {
+    min-height: 61px;
+    padding: 20px 21px 10px;
+    font-size: 18px;
   }
 }

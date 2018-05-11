@@ -76,7 +76,31 @@
 }
 
 @media (min-width: @desktop-width) {
+  .contacts {
+    padding-top: 62px;
+  }
+
+  .contacts__slogan {
+    margin-bottom: 54px;
+    font-size: 50px;
+  }
+
   .contacts__item {
-    width: 33.3%;
+    width: 301px;
+    padding: 0;
+
+    &:first-child {
+      order: -2;
+    }
+
+    &:last-child {
+      width: 301px;
+      padding: 0;
+      order: -1;
+    }
+  }
+
+  .contacts__text {
+    margin-top: 22px;
   }
 }
