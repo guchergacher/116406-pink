@@ -1,8 +1,10 @@
 .fields-list__item {
-  margin-bottom: 20px;
+  margin-bottom: 17px;
 }
 
 .fields-list__label {
+  display: inline-block;
+  margin: 0 0 5px 22px;
   font-size: 14px;
   font-weight: 400;
   color: @color-pink;
@@ -11,7 +13,8 @@
 
 .fields-list__field {
   display: block;
-  padding: 10px 20px;
+  width: 100%;
+  padding: 16px 20px;
   border: 2px solid #e5e5e5;
   font-family: inherit;
   font-size: 18px;
@@ -19,9 +22,53 @@
   line-height: 1.6;
   color: inherit;
 
+  &textarea {
+    min-height: 201px;
+  }
+
   &::placeholder {
     opacity: 1;
     color: inherit;
+  }
+}
+
+textarea.fields-list__field {
+  min-height: 201px;
+}
+
+@media (min-width: @tablet-width) {
+  .fields-list__item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 51px;
+
+    &--date {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 28px;
+
+      .fields-list__field {
+        width: 100%;
+      }
+
+      .fields-list__label {
+        order: 2;
+        margin: 11px 0 0 20px;
+      }
+    }
+  }
+
+  .fields-list__label {
+    margin: 0 19px 0 0;
+  }
+
+  .fields-list__field {
+    width: auto;
+    flex-grow: 1;
+  }
+
+  textarea.fields-list__field {
+    min-height: 193px;
   }
 }
 
@@ -31,7 +78,22 @@
     justify-content: space-between;
   }
 
-  .fields-list__item--date {
-    width: 375px;
+  .fields-list__item {
+    &--area {
+      margin-bottom: 45px;
+    }
+
+    &--date {
+      width: 375px;
+      margin-bottom: 15px;
+
+      .fields-list__label {
+        margin-top: 9px;
+      }
+    }
+  }
+
+  textarea.fields-list__field {
+    min-height: 127px;
   }
 }

@@ -1,23 +1,55 @@
+.registry {
+  padding: 45px 0 20px;
+}
+
 .registry__text {
-  padding: 55px 0 60px;
+  margin: 0;
   text-align: center;
   font-size: 14px;
   font-weight: 400;
 }
 
+.registry__xs-hide {
+  display: none;
+}
+
 .registry__group {
   margin: 0;
-  padding: 20px;
+  padding: 38px 20px 24px;
   border: none;
 
   &:nth-child(2n) {
     background-color: @color-gray;
   }
+
+  &:nth-child(3) {
+    padding-top: 8px;
+
+    .registry__group-title {
+      display: none;
+    }
+  }
+
+  &:nth-child(4) {
+    padding-bottom: 6px;
+
+    .registry__group-title {
+      padding-bottom: 35px;
+    }
+  }
+
+  &:nth-child(5) {
+    padding-bottom: 31px;
+
+    .registry__group-title {
+      padding-bottom: 16px;
+    }
+  }
 }
 
 .registry__group-title {
   margin: 0;
-  padding: 0;
+  padding: 0 20px 39px;
   display: block;
   width: 100%;
   float: left;
@@ -35,15 +67,23 @@
 }
 
 .registry__button {
-  display: inline-block;
+  display: block;
+  width: 100%;
   border: none;
   border-radius: 2px;
   background-color: #2aab6d;
-  padding: 20px 45px;
+  padding: 18px;
   line-height: 1.6;
+  font-family: inherit;
   font-size: 18px;
   font-weight: 700;
   color: #ffffff;
+  text-transform: uppercase;
+}
+
+.registry__need {
+  margin: 34px 0 0;
+  text-align: center;
   text-transform: uppercase;
 }
 
@@ -51,15 +91,95 @@
   color: @color-pink;
 }
 
+.registry__md-show {
+  display: none;
+}
+
 @media (min-width: @tablet-width) {
+  .registry {
+    padding: 93px 0 53px;
+  }
+
   .registry__text {
-    padding: 100px 0 80px;
+    padding: 0 30px;
+    font-size: 18px;
+    line-height: 1.7;
+  }
+
+  .registry__xs-hide {
+    display: inline;
+  }
+
+  .registry__form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 620px;
+    margin: 0 auto;
   }
 
   .registry__group {
+    padding: 70px 0 6px;
+
+    &:not(:first-child) {
+      border: 2px solid @color-gray;
+    }
+
     &:nth-child(2n) {
       background-color: transparent;
     }
+
+    &:nth-child(1) {
+      order: -3;
+
+      .registry__list {
+        padding: 0;
+      }
+    }
+
+    &:nth-child(2) {
+      padding: 43px 0 6px;
+      margin-bottom: 57px;
+    }
+
+    &:nth-child(3) {
+      order: -1;
+      padding: 36px 0 0;
+      margin-bottom: 55px;
+
+      .registry__group-title {
+        display: block;
+      }
+    }
+
+    &:nth-child(4) {
+      order: -2;
+      margin-bottom: 57px;
+      padding: 44px 0 18px;
+
+      .registry__group-title {
+        padding-bottom: 0;
+      }
+    }
+
+    &:nth-child(5) {
+      padding: 37px 0 0;
+      margin-bottom: 66px;
+
+      .registry__group-title {
+        padding-bottom: 0;
+      }
+    }
+  }
+
+  .registry__list {
+    padding: 0 58px;
+  }
+
+  .registry__group-title {
+    float: none;
+    width: auto;
+    padding: 0 25px;
   }
 
   .registry__wrapper {
@@ -67,15 +187,29 @@
     justify-content: space-between;
     align-items: center;
   }
+
+  .registry__button {
+    max-width: 300px;
+  }
+
+  .registry__need {
+    margin: 0;
+  }
 }
 
 @media (min-width: @desktop-width) {
+  .registry {
+    padding-bottom: 3px;
+  }
+
+  .registry__text {
+    padding: 0 70px 70px;
+  }
+
   .registry__form {
-    display: flex;
+    flex-direction: row;
     justify-content: space-between;
-    flex-wrap: wrap;
     width: 960px;
-    margin: 0 auto;
     padding: 0 10px;
   }
 
@@ -83,17 +217,51 @@
     width: 100%;
 
     &:nth-child(1) {
-      order: -3;
       width: 435px;
+      padding: 13px 0 0;
+    }
+
+    &:nth-child(2) {
+      padding: 45px 0 12px;
+
+      .registry__list {
+        padding: 0 0 0 58px;
+      }
     }
 
     &:nth-child(3) {
-      order: -1;
+      padding: 34px 0 0;
+
+      .registry__list {
+        padding: 0 58px;
+      }
     }
 
     &:nth-child(4) {
-      order: -2;
       width: 435px;
+      margin-bottom: 54px;
+      padding: 46px 0 20px;
     }
+
+    &:nth-child(5) {
+      padding: 34px 0 0;
+      margin-bottom: 64px;
+
+      .registry__list {
+        padding: 0 58px;
+      }
+    }
+  }
+
+  .registry__list {
+    padding: 0 74px;
+  }
+
+  .registry__wrapper {
+    padding: 0;
+  }
+
+  .registry__md-show {
+    display: inline;
   }
 }

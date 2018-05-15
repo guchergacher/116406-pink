@@ -1,3 +1,39 @@
 .interval-slider {
   font-size: 14px;
 }
+
+.interval-slider__range {
+  position: relative;
+  height: 3px;
+  width: 100%;
+  background-color: @color-default;
+}
+
+.interval-slider__button {
+  position: absolute;
+  top: -6px;
+  display: block;
+  width: 14px;
+  height: 14px;
+  border: 2px solid @color-pink;
+  border-radius: 100%;
+  background-color: #ffffff;
+
+  &--crop {
+    left: 192px;
+  }
+
+  &--fill {
+    left: 23px;
+  }
+
+  &--contrast {
+    left: 98px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .interval-slider__button--crop {
+    left: 144px;
+  }
+}
