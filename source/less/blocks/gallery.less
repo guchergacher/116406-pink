@@ -119,3 +119,28 @@
     width: 300px;
   }
 }
+
+@media (min-width: @desktop-width) {
+  .gallery__image {
+    min-height: 398px;
+
+    &--day {
+      min-height: 508px;
+    }
+  }
+
+  .gallery--day {
+    .gallery__text-wrapper {
+      padding: 23px 28px 20px;
+    }
+  }
+
+  .gallery__item {
+    margin-bottom: 55px;
+  }
+
+  .gallery__button-like--day {
+    top: 24px;
+    right: 33px;
+  }
+}

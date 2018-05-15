@@ -195,7 +195,68 @@
 }
 
 @media (min-width: @desktop-width) {
-  .upload__list {
+  .upload__form {
+    background-color: transparent;
+    margin-bottom: 31px;
+  }
+
+  .upload__wrapper {
+    width: 940px;
+    padding: 58px 60px 58px 80px;
+    background-color: @color-gray;
+  }
+
+  .upload__list-wrapper {
     width: 410px;
+    margin-top: -3px;
+  }
+
+  .upload__item {
+    margin: 0 0 16px;
+    padding-bottom: 9px;
+
+    &.upload__item:last-child {
+      padding: 2px 0 19px;
+      margin: 0;
+    }
+  }
+
+  .upload__text {
+    margin: 0;
+    padding: 4px 0 64px;
+    line-height: 1.77;
+  }
+
+  .upload__field {
+    & + label {
+      width: 48px;
+      height: 48px;
+    }
+
+    &--contrast + label {
+      width: 32px;
+      height: 32px;
+      margin: 0 8px;
+    }
+  }
+
+  .upload__slider {
+    width: 288px;
+    margin: -3px 0 0 14px;
+  }
+
+  .upload__button-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 145px 0 0 0;
+  }
+
+  .upload__button {
+    width: 183px;
+
+    &:not(:last-child) {
+      margin-bottom: 0;
+    }
   }
 }
