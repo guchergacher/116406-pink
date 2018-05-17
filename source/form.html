@@ -2,6 +2,8 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
     <title>HTML Academy: Пинк</title>
     <link href="css/style.css" rel="stylesheet">
   </head>
@@ -26,7 +28,7 @@
               <a class="header__link  header__link--current">Конкурс</a>
             </li>
             <li class="header__item">
-              <a class="header__link" href="https://htmlacademy.ru/intensive/adaptive">Html academy</a>
+              <a class="header__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
             </li>
           </ul>
         </nav>
@@ -41,7 +43,7 @@
       <section class="registry">
         <h2 class="visually-hidden">Регистрация</h2>
         <div class="container">
-          <p class="registry__text">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! Пожалуйста, заполните форму ниже:</p>
+          <p class="registry__text">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! <span class="registry__xs-hide">Пожалуйста, заполните форму ниже:</span></p>
         </div>
         <form class="registry__form" action="https://echo.htmlacademy.ru" method="post">
           <fieldset class="registry__group">
@@ -66,36 +68,36 @@
             <ul class="registry__list checkbox-list">
               <li class="checkbox-list__item">
                 <input class="checkbox-list__field visually-hidden" id="achievements-shark" type="checkbox" name="shark" checked>
-                <label for="achievements-shark">Сделал селфи с акулой</label>
+                <label class="checkbox-list__label" for="achievements-shark">Сделал селфи с акулой</label>
               </li>
               <li class="checkbox-list__item">
                 <input class="checkbox-list__field visually-hidden" id="achievements-sunbathe" type="checkbox" name="sunbathe" checked>
-                <label for="achievements-sunbathe">Обгорел на пляже</label>
+                <label class="checkbox-list__label" for="achievements-sunbathe">Обгорел на пляже</label>
               </li>
               <li class="checkbox-list__item">
                 <input class="checkbox-list__field visually-hidden" id="achievements-chack" type="checkbox" name="chack">
-                <label for="achievements-chack">Видел Чака Норриса</label>
+                <label class="checkbox-list__label" for="achievements-chack">Видел Чака Норриса</label>
               </li>
               <li class="checkbox-list__item">
                 <input class="checkbox-list__field visually-hidden" id="achievements-souvenir" type="checkbox" name="souvenir">
-                <label for="achievements-souvenir">Накупил сувениров</label>
+                <label class="checkbox-list__label" for="achievements-souvenir">Накупил сувениров</label>
               </li>
               <li class="checkbox-list__item">
                 <input class="checkbox-list__field visually-hidden" id="achievements-tower" type="checkbox" name="tower" checked>
-                <label for="achievements-tower">Удержал башню</label>
+                <label class="checkbox-list__label" for="achievements-tower">Удержал башню</label>
               </li>
               <li class="checkbox-list__item">
                 <input class="checkbox-list__field visually-hidden" id="achievements-hotel" type="checkbox" name="tower-punch">
-                <label for="achievements-hotel">Разгромил отель</label>
+                <label class="checkbox-list__label" for="achievements-hotel">Разгромил отель</label>
               </li>
             </ul>
           </fieldset>
           <fieldset class="registry__group">
-            <legend class="registry__group-title visually-hidden">Ваши личные данные</legend>
+            <legend class="registry__group-title">Контактная информация</legend>
             <ul class="registry__list fields-list fields-list--date">
               <li class="fields-list__item fields-list__item--date">
                 <label class="fields-list__label" for="user-number">Номер телефона</label>
-                <input class="fields-list__field" id="user-number" type="tel" name="user-number" placeholder="Номер,пожалуйста">
+                <input class="fields-list__field" id="user-number" type="tel" name="user-number" placeholder="Номер, пожалуйста">
               </li>
               <li class="fields-list__item fields-list__item--date">
                 <label class="fields-list__label" for="user-mail">Адрес почты</label>
@@ -108,31 +110,31 @@
             <ul class="registry__list radio-list">
               <li class="radio-list__item">
                 <input class="radio-list__field visually-hidden" id="app-ios" type="radio" name="app-group" value="ios" checked>
-                <label for="app-ios">Pink для iOS</label>
+                <label class="radio-list__label" for="app-ios">Pink для iOS</label>
               </li>
               <li class="radio-list__item">
                 <input class="radio-list__field visually-hidden" id="app-android" type="radio" name="app-group" value="android">
-                <label for="app-android">Pink на Android</label>
+                <label class="radio-list__label" for="app-android">Pink на Android</label>
               </li>
               <li class="radio-list__item">
                 <input class="radio-list__field visually-hidden" id="app-windows" type="radio" name="app-group" value="windows">
-                <label for="app-windows">Windows Phone</label>
+                <label class="radio-list__label" for="app-windows">Windows Phone</label>
               </li>
             </ul>
           </fieldset>
           <fieldset class="registry__group">
             <legend class="registry__group-title">Опишите свои эмоции</legend>
             <ul class="registry__list fields-list">
-              <li class="fields-list__item">
+              <li class="fields-list__item fields-list__item--area">
                 <label class="fields-list__label visually-hidden" for="user-text">Опишите свои эмоции</label>
-                <textarea class="fields-list__field" id="user-text" name="user-text" rows="5" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+                <textarea class="fields-list__field" id="user-text" name="user-text" rows="3" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
               </li>
             </ul>
           </fieldset>
           <div class="registry__wrapper container">
             <button class="registry__button" type="submit">Отправить форму</button>
             <p class="registry__need">
-              <span class="registry__need-star">*</span> — обязательные поля
+              <span class="registry__need-star">*</span> — обязательные <span class="registry__md-show">для заполнения</span> поля
             </p>
           </div>
         </form>
