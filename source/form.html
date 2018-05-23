@@ -5,17 +5,34 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="format-detection" content="telephone=no">
     <title>HTML Academy: Пинк</title>
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
   </head>
   <body>
+    <div style="display:none;">
+      <include src="build/img/sprite.svg"></include>
+    </div>
     <header class="header">
       <div class="header__wrapper">
         <a class="header__logo" href="index.html">
-          <img src="img/logo-pink-white-mobile.svg" width="74" height="23" alt="Логотип Пинк">
+          <svg class="header__logo-img header__logo-img--md" width="146" height="40">
+            <use xlink:href="#icon-logo-pink-white-desktop"></use>
+          </svg>
+          <svg class="header__logo-img header__logo-img--sm" width="146" height="40">
+            <use xlink:href="#icon-logo-pink-white-tablet"></use>
+          </svg>
+          <svg class="header__logo-img header__logo-img--xs" width="74" height="23">
+            <use xlink:href="#icon-logo-pink-white-mobile"></use>
+          </svg>
         </a>
         <nav class="header__nav">
           <button class="header__button" type="button">
             <span class="visually-hidden">Закрыть</span>
+            <svg class="header__button-cross" width="24" height="24">
+              <use xlink:href="#icon-menu-cross"></use>
+            </svg>
+            <svg class="header__button-burger" width="50" height="24">
+              <use xlink:href="#icon-menu-burger"></use>
+            </svg>
           </button>
           <ul class="header__list">
             <li class="header__item">
@@ -25,10 +42,10 @@
               <a class="header__link" href="photo.html">Фотографии</a>
             </li>
             <li class="header__item">
-              <a class="header__link  header__link--current">Конкурс</a>
+              <a class="header__link header__link--current">Конкурс</a>
             </li>
             <li class="header__item">
-              <a class="header__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+              <a class="header__link" href="https://www.htmlacademy.ru">HTML Academy</a>
             </li>
           </ul>
         </nav>
@@ -140,10 +157,15 @@
         </form>
       </section>
     </main>
-    <footer class="footer">
+    <footer class="footer footer--hide">
       <div class="footer__wrapper container">
         <a class="footer__logo-link" href="index.html">
-          <img src="img/logo-pink-blue-mobile.svg" width="147" height="40" alt="Логотип Пинк">
+          <svg class="footer__logo-img footer__logo-img--md" width="146" height="40">
+            <use xlink:href="#icon-logo-pink-blue-desktop"></use>
+          </svg>
+          <svg class="footer__logo-img footer__logo-img--xs" width="146" height="40">
+            <use xlink:href="#icon-logo-pink-blue-mobile"></use>
+          </svg>
         </a>
         <ul class="footer__social social">
           <li class="social__item">
@@ -164,7 +186,9 @@
         </ul>
         <a class="footer__develop" href="https://htmlacademy.ru/intensive/adaptive">
           Разработано
-          <img src="img/logo-htmlacademy.svg" width="27" height="34" alt="Логотип Академии">
+          <svg class="footer__copy-icon" width="40" height="40">
+            <use xlink:href="#icon-logo-htmlacademy"></use>
+          </svg>
         </a>
       </div>
     </footer>

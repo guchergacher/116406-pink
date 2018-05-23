@@ -16,6 +16,7 @@
   flex-shrink: 0;
   width: 280px;
   border: 1px solid #e5e5e5;
+  border-top-color: #f2f2f2;
 
   &--title {
     display: none;
@@ -23,8 +24,29 @@
 }
 
 .price__info {
+  position: relative;
   background-color: @color-default;
   padding: 18px 0 21px;
+
+  &--hit::after {
+    content: "Хит";
+    position: absolute;
+    top: 11px;
+    left: 12px;
+    color: #ffffff;
+    text-transform: uppercase;
+    transform: rotate(-40deg);
+  }
+
+  &--hit::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -2px;
+    width: 74px;
+    height: 73px;
+    background: url("../img/bg-hit.svg") no-repeat;
+  }
 }
 
 .price__title {

@@ -11,9 +11,14 @@
 .header__logo {
   display: block;
   margin: 0 0 28px 20px;
+}
 
-  img {
-    display: inherit;
+.header__logo-img {
+  display: block;
+
+  &--sm,
+  &--md {
+    display: none;
   }
 }
 
@@ -21,13 +26,18 @@
   position: absolute;
   right: 20px;
   top: 20px;
-  display: block;
-  width: 24px;
-  height: 24px;
-  background: url("../img/icon-menu-cross.svg") no-repeat center center;
-  background-size: 100% auto;
+  margin: 0;
   border: 0;
+  background-color: transparent;
   cursor: pointer;
+}
+
+.header__button-cross {
+  display: block;
+}
+
+.header__button-burger {
+  display: none;
 }
 
 .header__list {
@@ -48,6 +58,10 @@
   box-shadow: inset 0 -2px 0 0 #000000, inset 0 2px 0 0 #485461;
 }
 
+.footer__copy-icon {
+  fill: @color-pink;
+}
+
 @media (min-width: @tablet-width) {
   .header__wrapper {
     position: relative;
@@ -56,6 +70,16 @@
 
   .header__logo {
     margin: 0 0 60px 20px;
+  }
+
+  .header__logo-img {
+    &--xs {
+      display: none;
+    }
+
+    &--sm {
+      display: block;
+    }
   }
 
   .header__button {
@@ -85,6 +109,16 @@
 
   .header__logo {
     margin: 0;
+  }
+
+  .header__logo-img {
+    &--sm {
+      display: none;
+    }
+
+    &--md {
+      display: block;
+    }
   }
 
   .header__button {
