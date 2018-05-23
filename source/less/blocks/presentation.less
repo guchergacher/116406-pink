@@ -1,7 +1,3 @@
-.presentation {
-  background-color: @color-gray;
-}
-
 .presentation__slogan-wrapper {
   padding: 40px 0 5px;
   background-color: #ffffff;
@@ -15,14 +11,20 @@
   text-align: center;
 }
 
-.presentation__comment-wrapper::after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 277px;
-  margin-top: 42px;
-  background: url("../img/iphone-screen-mobile@1x.png") no-repeat center top;
-  background-size: 157px auto;
+.presentation__comment-wrapper {
+  position: relative;
+  background: @color-gray url("../img/bg-triangle-white.svg") no-repeat;
+  background-size: 100% auto;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 277px;
+    margin-top: 42px;
+    background: url("../img/iphone-screen-mobile@1x.png") no-repeat center top;
+    background-size: 157px auto;
+  }
 }
 
 .presentation__comment {
@@ -107,18 +109,14 @@
     font-size: 40px;
   }
 
-  .presentation__comment-wrapper {
-    position: relative;
-
-    &::after {
-      position: absolute;
-      top: -40px;
-      left: 0;
-      width: 268px;
-      height: 481px;
-      background-image: url("../img/iphone-screen-3-tablet@1x.png");
-      background-size: 100% auto;
-    }
+  .presentation__comment-wrapper::after {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    width: 268px;
+    height: 481px;
+    background-image: url("../img/iphone-screen-3-tablet@1x.png");
+    background-size: 100% auto;
   }
 
   .presentation__comment {

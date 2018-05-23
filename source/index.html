@@ -15,23 +15,23 @@
       <div class="header__wrapper">
         <a class="header__logo">
           <svg class="header__logo-img header__logo-img--md" width="146" height="40">
-            <use xlink:href="#icon-logo-pink-white-desktop"></use>
+            <use xlink:href="#sprite-logo-pink-white-desktop"></use>
           </svg>
           <svg class="header__logo-img header__logo-img--sm" width="146" height="40">
-            <use xlink:href="#icon-logo-pink-white-tablet"></use>
+            <use xlink:href="#sprite-logo-pink-white-tablet"></use>
           </svg>
           <svg class="header__logo-img header__logo-img--xs" width="74" height="23">
-            <use xlink:href="#icon-logo-pink-white-mobile"></use>
+            <use xlink:href="#sprite-logo-pink-white-mobile"></use>
           </svg>
         </a>
         <nav class="header__nav">
           <button class="header__button" type="button">
             <span class="visually-hidden">Закрыть</span>
             <svg class="header__button-cross" width="24" height="24">
-              <use xlink:href="#icon-menu-cross"></use>
+              <use xlink:href="#sprite-menu-cross"></use>
             </svg>
             <svg class="header__button-burger" width="50" height="24">
-              <use xlink:href="#icon-menu-burger"></use>
+              <use xlink:href="#sprite-menu-burger"></use>
             </svg>
           </button>
           <ul class="header__list">
@@ -88,21 +88,23 @@
             <p class="presentation__slogan">Нам есть, что вам<br>предложить!</p>
           </div>
         </div>
-        <div class="presentation__comment-wrapper container">
-          <ul class="presentation__comment">
-            <li class="presentation__comment-item">
-              <b class="presentation__comment-title">Поднимает настроение</b>
-              <p class="presentation__comment-text">Приложение позволит вам победить осеннюю хандру и&nbsp;депрессию буквально в несколько кликов!</p>
-            </li>
-            <li class="presentation__comment-item">
-              <b class="presentation__comment-title">Меняет мир вокруг</b>
-              <p class="presentation__comment-text">Сделайте снимок&nbsp;и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
-            </li>
-            <li class="presentation__comment-item">
-              <b class="presentation__comment-title">Заводит новых друзей</b>
-              <p class="presentation__comment-text">Ставьте лайки, комментируйте, делитесь фотографиями с&nbsp;друзьями и&nbsp;заводите новых</p>
-            </li>
-          </ul>
+        <div class="presentation__comment-wrapper">
+          <div class="container">
+            <ul class="presentation__comment">
+              <li class="presentation__comment-item">
+                <b class="presentation__comment-title">Поднимает настроение</b>
+                <p class="presentation__comment-text">Приложение позволит вам победить осеннюю хандру и&nbsp;депрессию буквально в несколько кликов!</p>
+              </li>
+              <li class="presentation__comment-item">
+                <b class="presentation__comment-title">Меняет мир вокруг</b>
+                <p class="presentation__comment-text">Сделайте снимок&nbsp;и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+              </li>
+              <li class="presentation__comment-item">
+                <b class="presentation__comment-title">Заводит новых друзей</b>
+                <p class="presentation__comment-text">Ставьте лайки, комментируйте, делитесь фотографиями с&nbsp;друзьями и&nbsp;заводите новых</p>
+              </li>
+            </ul>
+          </div>
         </div>
         <div class="presentation__wrapper">
           <div class="presentation__group container">
@@ -237,40 +239,52 @@
       </section>
       <section class="contacts">
         <h2 class="visually-hidden">Контакты</h2>
-        <div class="container">
-          <p class="contacts__slogan">Остались вопросы?<br>Свяжитесь с нами!</p>
-          <ul class="contacts__list">
-            <li class="contacts__item">
-              <b class="contacts__title">Звоните:</b>
-              <p class="contacts__text">
-                <a href="tel:+78125556666">+7 (812) 555-66-66</a>
-              </p>
-            </li>
-            <li class="contacts__item">
-              <b class="contacts__title">Пишите:</b>
-              <p class="contacts__text">
-                <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-              </p>
-            </li>
-            <li class="contacts__item">
-              <b class="contacts__title">Приезжайте в гости:</b>
-              <p class="contacts__text">ул. Большая<br>Конюшенная, 19/8</p>
-            </li>
-          </ul>
+        <div class="contacts__wrapper">
+          <div class="container">
+            <p class="contacts__slogan">Остались вопросы?<br>Свяжитесь с нами!</p>
+            <ul class="contacts__list">
+              <li class="contacts__item">
+                <b class="contacts__title">Звоните:</b>
+                <p class="contacts__text">
+                  <a href="tel:+78125556666">+7 (812) 555-66-66</a>
+                </p>
+              </li>
+              <li class="contacts__item">
+                <b class="contacts__title">Пишите:</b>
+                <p class="contacts__text">
+                  <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+                </p>
+              </li>
+              <li class="contacts__item">
+                <b class="contacts__title">Приезжайте в гости:</b>
+                <p class="contacts__text">ул. Большая<br>Конюшенная, 19/8</p>
+              </li>
+            </ul>
+          </div>
         </div>
-        <a class="contacts__wrapper" href="#" target="_blank">
-          <img class="contacts__map" src="img/bg-map-mobile@1x.png" width="320" height="645" alt="Карта">
-        </a>
+        <div class="contacts__map-wrapper">
+          <a class="contacts__link" href="#" target="_blank">
+            <picture>
+              <source type="image/webp" media="(min-width: 960px)" srcset="img/bg-map-desktop@1x.webp 1x, img/bg-map-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 660px)" srcset="img/bg-map-tablet@1x.webp 1x, img/bg-map-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/bg-map-mobile@1x.webp 1x, img/bg-map-mobile@2x.webp 2x">
+
+              <source media="(min-width: 960px)" srcset="img/bg-map-desktop@1x.jpg 1x, img/bg-map-desktop@2x.jpg 2x">
+              <source media="(min-width: 660px)" srcset="img/bg-map-tablet@1x.jpg 1x, img/bg-map-tablet@2x.jpg 2x">
+              <img src="img/bg-map-mobile@1x.jpg" srcset="img/bg-map-mobile@2x.jpg 2x" alt="Карта">
+            </picture>
+          </a>
+        </div>
       </section>
     </main>
     <footer class="footer footer--hide">
       <div class="footer__wrapper container">
         <a class="footer__logo-link">
           <svg class="footer__logo-img footer__logo-img--md" width="146" height="40">
-            <use xlink:href="#icon-logo-pink-blue-desktop"></use>
+            <use xlink:href="#sprite-logo-pink-blue-desktop"></use>
           </svg>
           <svg class="footer__logo-img footer__logo-img--xs" width="146" height="40">
-            <use xlink:href="#icon-logo-pink-blue-mobile"></use>
+            <use xlink:href="#sprite-logo-pink-blue-mobile"></use>
           </svg>
         </a>
         <ul class="footer__social social">
@@ -293,7 +307,7 @@
         <a class="footer__develop" href="https://htmlacademy.ru/intensive/adaptive">
           Разработано
           <svg class="footer__copy-icon" width="40" height="40">
-            <use xlink:href="#icon-logo-htmlacademy"></use>
+            <use xlink:href="#sprite-logo-htmlacademy"></use>
           </svg>
         </a>
       </div>

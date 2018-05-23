@@ -1,7 +1,27 @@
 .contacts {
+  position: relative;
   padding-top: 40px;
   text-align: center;
   line-height: 1.25;
+}
+
+.contacts__wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  background-color: #ffffff;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    height: 130px;
+    background: url("../img/bg-triangle-white-footer.svg") no-repeat center top;
+  }
 }
 
 .contacts__list {
@@ -35,11 +55,11 @@
   }
 }
 
-.contacts__wrapper {
+.contacts__link {
   display: block;
-  padding-top: 15px;
 
   img {
+    display: block;
     width: 100%;
   }
 }
