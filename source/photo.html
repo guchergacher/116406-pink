@@ -78,7 +78,7 @@
             <div class="gallery__text-wrapper">
               <p class="gallery__title"><b>Анна</b> (5 минут назад)</p>
               <p class="gallery__comment">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
-              <button class="gallery__button-like gallery__button-like--day" type="button">Нравиться: 215</button>
+              <span class="gallery__button-like gallery__button-like--day">Нравится: 215</span>
             </div>
           </div>
         </div>
@@ -99,7 +99,7 @@
               <div class="gallery__text-wrapper">
                 <p class="gallery__title"><b>Левон</b> (5 часов назад)</p>
                 <p class="gallery__comment">Вчера он на луну летал, сегодня в руки к нам попал.</p>
-                <button class="gallery__button-like" type="button">Нравиться: 356</button>
+                <span class="gallery__button-like">Нравится: 356</span>
               </div>
             </li>
             <li class="gallery__item">
@@ -117,7 +117,7 @@
               <div class="gallery__text-wrapper">
                 <p class="gallery__title"><b>Антон</b> (12 часов назад)</p>
                 <p class="gallery__comment">Соседи будут рады!</p>
-                <button class="gallery__button-like" type="button">Нравиться: 666</button>
+                <span class="gallery__button-like">Нравится: 666</span>
               </div>
             </li>
             <li class="gallery__item">
@@ -135,7 +135,7 @@
               <div class="gallery__text-wrapper">
                 <p class="gallery__title"><b>Борис</b> (20 часов назад)</p>
                 <p class="gallery__comment">Здесь могла быть ваша цитата о высоком и вечном.</p>
-                <button class="gallery__button-like" type="button">Нравиться: 215</button>
+                <span class="gallery__button-like">Нравится: 215</span>
               </div>
             </li>
             <li class="gallery__item">
@@ -153,7 +153,7 @@
               <div class="gallery__text-wrapper">
                 <p class="gallery__title"><b>Сергей</b> (25 часов назад)</p>
                 <p class="gallery__comment">Самая кубанская в мире!</p>
-                <button class="gallery__button-like" type="button">Нравиться: 4</button>
+                <span class="gallery__button-like">Нравится: 4</span>
               </div>
             </li>
             <li class="gallery__item">
@@ -171,7 +171,7 @@
               <div class="gallery__text-wrapper">
                 <p class="gallery__title"><b>Максим</b> (40 часов назад)</p>
                 <p class="gallery__comment">Где снег-то?</p>
-                <button class="gallery__button-like" type="button">Нравиться: 150</button>
+                <span class="gallery__button-like">Нравится: 150</span>
               </div>
             </li>
             <li class="gallery__item">
@@ -189,7 +189,7 @@
               <div class="gallery__text-wrapper">
                 <p class="gallery__title"><b>Надежда</b> (45 часов назад)</p>
                 <p class="gallery__comment">Всем GM и взаимные лайки!</p>
-                <button class="gallery__button-like" type="button">Нравиться: 2560</button>
+                <span class="gallery__button-like">Нравится: 2560</span>
               </div>
             </li>
           </ul>
@@ -209,19 +209,18 @@
 
               <source media="(min-width: 960px)" srcset="img/photo-road-desktop@1x.jpg 1x, img/photo-road-desktop@2x.jpg 2x">
               <source media="(min-width: 660px)" srcset="img/photo-road-tablet@1x.jpg 1x, img/photo-road-tablet@2x.jpg 2x">
-              <img class="posting__photo" src="img/photo-road-mobile@1x.jpg" srcset="img/photo-road-mobile@2x.jpg 2x" alt="Фото">
+              <img class="upload__user-photo" src="img/photo-road-mobile@1x.jpg" srcset="img/photo-road-mobile@2x.jpg 2x" alt="Фото">
             </picture>
             <div class="upload__list-wrapper">
               <ul class="upload__list">
                 <li class="upload__item">
                   <div class="upload__item-wrapper">
-                    <input class="upload__field upload__field--crop visually-hidden" id="crop-element" type="checkbox" name="crop-element" checked>
-                    <label for="crop-element">
+                    <button class="upload__field upload__field--crop" type="button">
                       <span class="visually-hidden">Кадрировать</span>
                       <svg width="48" height="48">
                         <use xlink:href="#sprite-editor-crop"></use>
                       </svg>
-                    </label>
+                    </button>
                   </div>
                   <div class="upload__slider interval-slider">
                     <div class="interval-slider__range">
@@ -233,13 +232,12 @@
                 </li>
                 <li class="upload__item">
                   <div class="upload__item-wrapper">
-                    <input class="upload__field upload__field--fill visually-hidden" id="fill-element" type="checkbox" name="fill-element">
-                    <label for="fill-element">
+                    <button class="upload__field upload__field--fill" type="button">
                       <span class="visually-hidden">Заполнить</span>
                       <svg width="48" height="48">
                         <use xlink:href="#sprite-editor-fill"></use>
                       </svg>
-                    </label>
+                    </button>
                   </div>
                   <div class="upload__slider upload__slider--hide interval-slider">
                     <div class="interval-slider__range">
@@ -251,13 +249,12 @@
                 </li>
                 <li class="upload__item">
                   <div class="upload__item-wrapper">
-                    <input class="upload__field upload__field--contrast visually-hidden" id="contrast-element" type="checkbox" name="contrast-element">
-                    <label for="contrast-element">
+                    <button class="upload__field upload__field--contrast" type="button">
                       <span class="visually-hidden">Контраст</span>
                       <svg width="32" height="32">
                         <use xlink:href="#sprite-editor-contrast"></use>
                       </svg>
-                    </label>
+                    </button>
                   </div>
                   <div class="upload__slider upload__slider--hide interval-slider">
                     <div class="interval-slider__range">
@@ -277,7 +274,7 @@
         </form>
       </section>
     </main>
-    <footer class="footer footer--hide">
+    <footer class="footer">
       <div class="footer__wrapper container">
         <a class="footer__logo-link" href="index.html">
           <svg class="footer__logo-img footer__logo-img--md" width="146" height="40">
@@ -306,7 +303,7 @@
         </ul>
         <a class="footer__develop" href="https://htmlacademy.ru/intensive/adaptive">
           Разработано
-          <svg class="footer__copy-icon" width="40" height="40">
+          <svg class="footer__copy-icon" width="28" height="34">
             <use xlink:href="#sprite-logo-htmlacademy"></use>
           </svg>
         </a>
