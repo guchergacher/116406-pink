@@ -1,0 +1,131 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: none;
+  overflow-y: auto;
+
+  &--ok .modal__wrapper {
+    background-color: @color-gray;
+  }
+
+  &--error {
+    .modal__wrapper {
+      background-color: #ffffff;
+    }
+
+    .modal__text-wrapper {
+      padding-bottom: 0;
+    }
+
+    .modal__button {
+      margin-top: 35px;
+    }
+  }
+}
+
+.modal--show {
+  display: block;
+}
+
+.modal__wrapper {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 320px;
+  margin: 0 auto;
+  padding-bottom: 45px;
+  box-shadow: 0 7px 15px 0 rgba(0, 0, 0, 0.15);
+  text-align: center;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.modal__text-wrapper {
+  padding: 45px 20px 35px;
+  background-color: #ffffff;
+}
+
+.modal__title {
+  margin: 0 0 20px;
+  font-size: 18px;
+  line-height: 1.25;
+  font-weight: 700;
+  color: #000000;
+}
+
+.modal__text {
+  margin: 0;
+  line-height: 1.7;
+}
+
+.modal__button {
+  display: block;
+  width: 280px;
+  margin: 45px auto 0;
+  padding: 22px;
+  background-color: #2aab6d;
+  border: 0;
+  border-radius: 4px;
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 700;
+  color: #ffffff;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.modal__button:hover {
+  background-color: #e74246;
+}
+
+.modal__button:active {
+  background-color: #d7373b;
+  border-top-color: #c13135;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+@media (min-width: @tablet-width) {
+  .modal__wrapper {
+    width: 460px;
+  }
+
+  .modal__text-wrapper {
+    padding: 45px 75px 35px;
+  }
+
+  .modal__title {
+    font-size: 30px;
+  }
+
+  .modal__text {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .modal--error {
+    .modal__wrapper {
+      background-color: @color-gray;
+    }
+
+    .modal__text-wrapper {
+      padding-bottom: 35px;
+    }
+
+    .modal__button {
+      margin-top: 45px;
+    }
+  }
+
+  .modal__wrapper {
+    width: 780px;
+  }
+
+  .modal__text-wrapper {
+    padding: 45px 210px 35px;
+  }
+}
