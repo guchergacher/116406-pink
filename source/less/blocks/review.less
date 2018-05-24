@@ -47,7 +47,7 @@
 }
 
 .review__buttons {
-  margin-top: 20px;
+  margin-top: 24px;
 }
 
 .review__button {
@@ -61,7 +61,7 @@
 .review__arrow-button {
   position: absolute;
   top: 50%;
-  margin: 0;
+  margin: -10px 0 0;
   width: 22px;
   height: 41px;
   background-color: transparent;
@@ -69,13 +69,13 @@
   cursor: pointer;
 
   &--prev {
-    left: 0;
+    left: 10px;
     background: url("../img/icon-review-arrow-left.svg") no-repeat;
     background-size: 100% auto;
   }
 
   &--next {
-    right: 0;
+    right: 10px;
     background: url("../img/icon-review-arrow-right.svg") no-repeat;
     background-size: 100% auto;
   }
@@ -83,7 +83,7 @@
 
 @media (min-width: @tablet-width) {
   .review {
-    padding: 95px 0 18px;
+    padding: 98px 0 13px;
   }
 
   .review__text-wrapper {
@@ -105,15 +105,11 @@
   .review__info {
     display: block;
   }
-
-  .review__buttons {
-    margin-top: 20px;
-  }
 }
 
 @media (min-width: @desktop-width) {
   .review {
-    padding: 71px 0 37px;
+    padding: 73px 0 37px;
   }
 
   .review__wrapper::before {

@@ -24,20 +24,24 @@
   }
 
   &--fb {
-    background: url("../img/icon-facebook.svg") no-repeat center center;
-    background-size: 9px auto;
+    background: url(../img/icon-facebook.svg) no-repeat center center;
+    background-size: 8px auto;
   }
 
   &--youtube {
-    background: url("../img/icon-youtube.svg") no-repeat center center;
-    background-size: 13px auto;
+    background: url(../img/icon-youtube.svg) no-repeat center center;
+    background-size: 15px auto;
   }
 }
 
 @media (min-width: @tablet-width) {
   .social {
     width: 250px;
-    margin: 0;
+    margin: 5px 0 0 -5px;
+  }
+
+  .social__item {
+    margin-right: 12px;
   }
 }
 
