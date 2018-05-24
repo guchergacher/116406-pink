@@ -5,7 +5,8 @@
 
 .radio-list__label {
   position: relative;
-  line-height: 1.6;
+  display: flex;
+  align-items: center;
   font-size: 18px;
 
   &::before,
@@ -15,12 +16,10 @@
   }
 
   &::before {
-    display: inline-block;
-    vertical-align: middle;
+    display: inherit;
     width: 40px;
     height: 40px;
     margin-right: 30px;
-    line-height: 40px;
     background-color: #ffffff;
     border: 2px solid #e5e5e5;
   }
@@ -33,7 +32,7 @@
     height: 15px;
     top: 50%;
     left: 12px;
-    margin-top: -5px;
+    margin-top: -7px;
     background-color: @color-pink;
   }
 }

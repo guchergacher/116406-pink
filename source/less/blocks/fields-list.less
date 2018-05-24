@@ -1,5 +1,5 @@
 .fields-list__item {
-  margin-bottom: 17px;
+  margin-bottom: 16px;
 }
 
 .fields-list__label {
@@ -14,7 +14,7 @@
 .fields-list__field {
   display: block;
   width: 100%;
-  padding: 16px 20px;
+  padding: 16px 19px;
   border: 2px solid #e5e5e5;
   font-family: inherit;
   font-size: 18px;
@@ -40,12 +40,30 @@ textarea.fields-list__field {
   .fields-list__item {
     display: flex;
     align-items: center;
-    margin-bottom: 51px;
+    margin-bottom: 50px;
 
     &--date {
+      position: relative;
       flex-direction: column;
       align-items: flex-start;
       margin-bottom: 28px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 62px;
+        height: 64px;
+      }
+
+      &:first-child::before {
+        background: #e5e5e5 url("../img/icon-phone.svg") no-repeat center center;
+      }
+
+      &:last-child::before {
+        background: #e5e5e5 url("../img/icon-mail.svg") no-repeat center center;
+      }
 
       .fields-list__field {
         width: 100%;
@@ -53,7 +71,7 @@ textarea.fields-list__field {
 
       .fields-list__label {
         order: 2;
-        margin: 11px 0 0 20px;
+        margin: 9px 0 0 20px;
       }
     }
   }
@@ -73,6 +91,10 @@ textarea.fields-list__field {
 }
 
 @media (min-width: @desktop-width) {
+  .fields-list__item {
+    margin-bottom: 51px;
+  }
+
   .fields-list--date {
     display: flex;
     justify-content: space-between;

@@ -15,15 +15,16 @@
 
 .registry__group {
   margin: 0;
-  padding: 38px 20px 24px;
+  padding: 35px 20px 24px;
   border: none;
 
   &:nth-child(2n) {
     background-color: @color-gray;
+    padding: 38px 20px 0;
   }
 
   &:nth-child(3) {
-    padding-top: 8px;
+    padding-top: 32px;
 
     .registry__group-title {
       display: none;
@@ -31,7 +32,7 @@
   }
 
   &:nth-child(4) {
-    padding-bottom: 6px;
+    padding-bottom: 7px;
 
     .registry__group-title {
       padding-bottom: 35px;
@@ -39,7 +40,7 @@
   }
 
   &:nth-child(5) {
-    padding-bottom: 31px;
+    padding: 38px 20px 32px;
 
     .registry__group-title {
       padding-bottom: 16px;
@@ -97,7 +98,7 @@
 
 @media (min-width: @tablet-width) {
   .registry {
-    padding: 93px 0 53px;
+    padding: 93px 0 48px;
   }
 
   .registry__text {
@@ -119,7 +120,7 @@
   }
 
   .registry__group {
-    padding: 70px 0 6px;
+    padding: 69px 0 6px;
 
     &:not(:first-child) {
       border: 2px solid @color-gray;
@@ -144,7 +145,7 @@
 
     &:nth-child(3) {
       order: -1;
-      padding: 36px 0 0;
+      padding: 38px 0 0;
       margin-bottom: 55px;
 
       .registry__group-title {
@@ -163,8 +164,8 @@
     }
 
     &:nth-child(5) {
-      padding: 37px 0 0;
-      margin-bottom: 66px;
+      padding: 37px 0 2px;
+      margin-bottom: 67px;
 
       .registry__group-title {
         padding-bottom: 0;
@@ -199,11 +200,11 @@
 
 @media (min-width: @desktop-width) {
   .registry {
-    padding-bottom: 3px;
+    padding-bottom: 0;
   }
 
   .registry__text {
-    padding: 0 70px 70px;
+    padding: 0 70px 69px;
   }
 
   .registry__form {
@@ -240,12 +241,12 @@
     &:nth-child(4) {
       width: 435px;
       margin-bottom: 54px;
-      padding: 46px 0 20px;
+      padding: 46px 0 19px;
     }
 
     &:nth-child(5) {
       padding: 34px 0 0;
-      margin-bottom: 64px;
+      margin-bottom: 65px;
 
       .registry__list {
         padding: 0 58px;

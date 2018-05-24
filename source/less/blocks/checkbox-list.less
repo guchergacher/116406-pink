@@ -4,17 +4,16 @@
 }
 
 .checkbox-list__label {
-  line-height: 1.6;
+  display: flex;
+  align-items: center;
   font-size: 18px;
 
   &::before {
     content: "";
-    display: inline-block;
-    vertical-align: middle;
+    display: inherit;
     width: 40px;
     height: 40px;
     margin-right: 30px;
-    line-height: 40px;
     background-color: #ffffff;
     border: 2px solid #e5e5e5;
     border-radius: 3px;
@@ -22,7 +21,7 @@
 }
 
 .checkbox-list__field:checked + .checkbox-list__label::before {
-  background: #ffffff url("../img/icon-yes.svg") no-repeat center center;
+  background: #ffffff url("../img/icon-yes-pink.svg") no-repeat center center;
 }
 
 .checkbox-list__field:focus + .checkbox-list__label {
