@@ -47,6 +47,7 @@
     width: 74px;
     height: 73px;
     background: url("../img/bg-hit.svg") no-repeat;
+    background-size: 100% auto;
   }
 }
 
@@ -120,11 +121,27 @@
       .price__features {
         border: 1px solid #e5e5e5;
       }
+
+      .price__add {
+        background-image: none;
+      }
     }
   }
 
   .price__info {
     padding: 15px 0 12px;
+
+    &--hit::before {
+      left: 0;
+      width: 60px;
+      height: 60px;
+      background-image: url("../img/bg-hit-tablet.svg");
+    }
+
+    &--hit::after {
+      top: 4px;
+      left: 7px;
+    }
   }
 
   .price__title {
@@ -140,6 +157,7 @@
     min-height: 47px;
     padding: 14px 15px;
     text-transform: none;
+    background-position: center center;
 
     span {
       display: none;
@@ -158,6 +176,17 @@
 
   .price__info {
     padding: 17px 0 20px;
+
+    &--hit::after {
+      top: 11px;
+      left: 12px;
+    }
+
+    &--hit::before {
+      width: 74px;
+      height: 73px;
+      background-image: url("../img/bg-hit.svg");
+    }
   }
 
   .price__title {

@@ -64,12 +64,19 @@
   align-items: flex-start;
 
   &::before {
-    content: "";
+    content: "24";
     display: inherit;
+    justify-content: center;
+    align-items: center;
     width: 240px;
     height: 280px;
-    background: url("../img/icon-timer.svg") no-repeat;
-    background-size: 100% auto;
+    padding-top: 25px;
+    background: url("../img/icon-editor-diagram-fill.svg") no-repeat center 60px, url("../img/icon-timer.svg") no-repeat center center;
+    background-size: 200px auto, 100% auto;
+    font-size: 96px;
+    font-weight: 700;
+    line-height: 96px;
+    color: @color-pink;
   }
 }
 
@@ -207,6 +214,9 @@
   .presentation__group::before {
     width: 300px;
     height: 348px;
+    background-position: center 70px, center center;
+    background-size: 253px auto, 100% auto;
+    font-size: 120px;
   }
 
   .presentation__title {
