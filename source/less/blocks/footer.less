@@ -17,15 +17,33 @@
 
 .footer__logo-img {
   display: block;
+  fill: @color-default;
 
   &--md {
     display: none;
+  }
+
+  &:hover {
+    fill: @color-pink;
+  }
+
+  &:active {
+    fill: @color-default;
+    opacity: 0.3;
   }
 }
 
 .footer__develop {
   font-size: 14px;
   color: inherit;
+
+  &:hover svg {
+    fill: #283645;
+  }
+
+  &:active svg {
+    opacity: 0.3;
+  }
 }
 
 .footer__copy-icon {

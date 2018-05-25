@@ -46,7 +46,7 @@
     display: block;
     width: 100%;
     height: auto;
-    fill: #e3e3e4;
+    fill: #b5b9be;
   }
 
   &--crop {
@@ -62,6 +62,11 @@
   &--contrast {
     width: 32px;
     padding-left: 4px;
+  }
+
+  &:not(&--crop) svg:hover {
+    fill: #8d949b;
+    cursor: pointer;
   }
 }
 
@@ -185,6 +190,11 @@
     &--contrast {
       width: 20px;
     }
+
+    &:not(&--crop) svg:hover {
+      fill: @color-pink;
+      cursor: default;
+    }
   }
 
   .upload__slider {
@@ -203,8 +213,31 @@
     border-top: 0;
   }
 
-  .upload__button:not(:last-child) {
-    margin-bottom: 25px;
+  .upload__button {
+    &:not(:last-child) {
+      margin-bottom: 25px;
+
+      &:hover {
+        background-color: @color-pink;
+        color: #ffffff;
+      }
+
+      &:active {
+        color: rgba(255, 255, 255, 0.3);
+      }
+    }
+
+    &--reset {
+      &:hover {
+        border-color: #b5b9be;
+        color: #b5b9be;
+      }
+
+      &:active {
+        background-color: #b5b9be;
+        color: rgba(255, 255, 255, 0.3);
+      }
+    }
   }
 }
 

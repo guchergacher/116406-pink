@@ -30,6 +30,15 @@
     opacity: 1;
     color: inherit;
   }
+
+  &:hover {
+    border-color: #283645;
+  }
+
+  &:focus {
+    border-color: @color-pink;
+    outline: 0;
+  }
 }
 
 textarea.fields-list__field {
@@ -51,10 +60,10 @@ textarea.fields-list__field {
       &::before {
         content: "";
         position: absolute;
-        top: 0;
-        right: 0;
+        top: 2px;
+        right: 2px;
         width: 62px;
-        height: 64px;
+        height: 60px;
       }
 
       &:first-child::before {

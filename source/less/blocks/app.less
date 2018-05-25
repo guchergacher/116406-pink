@@ -42,6 +42,15 @@
   line-height: 1;
   color: #ffffff;
   text-align: center;
+
+  &:hover {
+    background-color: #ffffff;
+    color: @color-pink;
+  }
+
+  &:active {
+    color: rgba(210, 40, 86, 0.3);
+  }
 }
 
 .app__support {
@@ -60,6 +69,16 @@
   a,
   img {
     display: block;
+  }
+
+  a {
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:active {
+      opacity: 0.6;
+    }
   }
 }
 
