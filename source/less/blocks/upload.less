@@ -8,7 +8,7 @@
 }
 
 .upload__list-wrapper {
-  margin-top: 41px;
+  margin-top: 40px;
 }
 
 .upload__list {
@@ -18,11 +18,11 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding-bottom: 52px;
+  padding-bottom: 65px;
 }
 
 .upload__item {
-  margin-right: 31px;
+  margin-right: 29px;
 
   &:last-child {
     padding-top: 9px;
@@ -30,32 +30,49 @@
   }
 }
 
+.upload__item-wrapper {
+  width: 48px;
+}
+
 .upload__field {
-  & + label {
+  display: block;
+  width: 48px;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  border: 0;
+
+  svg {
     display: block;
-    width: 48px;
-    height: 48px;
+    width: 100%;
+    height: auto;
+    fill: #b5b9be;
   }
 
-  &--crop + label {
-    background: url("../img/icon-editor-crop.svg") no-repeat;
-    background-size: 100% auto;
+  &--crop {
+    svg {
+      fill: @color-pink;
+    }
   }
 
-  &--fill + label {
-    background: url("../img/icon-editor-fill.svg") no-repeat;
-    background-size: 100% auto;
+  &--fill {
+    padding: 3px 0 0 2px;
   }
 
-  &--contrast + label {
-    background: url("../img/icon-editor-contrast.svg") no-repeat;
-    background-size: 32px auto;
+  &--contrast {
+    width: 32px;
+    padding-left: 4px;
+  }
+
+  &:not(&--crop) svg:hover {
+    fill: #8d949b;
+    cursor: pointer;
   }
 }
 
 .upload__text {
   text-align: center;
-  padding: 22px 0 42px;
+  padding: 19px 0 43px;
   margin: 0 0 0 -5px;
   font-size: 14px;
   font-weight: 400;
@@ -68,10 +85,10 @@
 
 .upload__slider {
   position: absolute;
-  top: 84px;
+  top: 86px;
   left: 50%;
   width: 240px;
-  margin-left: -120px;
+  margin-left: -122px;
 
   &--hide {
     display: none;
@@ -79,7 +96,7 @@
 }
 
 .upload__button-group {
-  padding: 39px 20px 0;
+  padding: 38px 20px 0;
   margin: 0 -20px;
   border-top: 1px solid #dddfe0;
 }
@@ -100,7 +117,7 @@
   cursor: pointer;
 
   &:not(:last-child) {
-    margin-bottom: 10px;
+    margin-bottom: 13px;
   }
 
   &--reset {
@@ -112,9 +129,9 @@
 
 @media (min-width: @tablet-width) {
   .upload__text {
-    padding: 42px 0 61px;
+    padding: 46px 0 65px;
     font-size: 18px;
-    line-height: 1.9;
+    line-height: 1.8;
   }
 
   .upload__form {
@@ -124,7 +141,7 @@
   .upload__wrapper {
     display: flex;
     justify-content: space-between;
-    padding: 60px 0 55px;
+    padding: 59px 0 54px;
   }
 
   .upload__user-photo {
@@ -138,7 +155,8 @@
   }
 
   .upload__item-wrapper {
-    margin-right: 30px;
+    width: 24px;
+    margin-right: 29px;
   }
 
   .upload__list {
@@ -150,26 +168,29 @@
     align-items: center;
     width: 100%;
     margin: 0 0 25px;
-    padding-bottom: 23px;
+    padding-bottom: 22px;
     border-bottom: 1px solid #dddfe0;
 
     &:last-child {
-      padding: 7px 0 26px;
+      padding: 1px 0 27px;
       margin: 0;
     }
   }
 
   .upload__field {
-    & + label {
-      width: 24px;
-      height: 24px;
+    width: 24px;
+
+    svg {
+      fill: @color-pink;
     }
 
-    &--contrast + label {
-      width: 16px;
-      height: 16px;
-      margin: 0 0 0 5px;
-      background-size: 100% auto;
+    &--contrast {
+      width: 20px;
+    }
+
+    &:not(&--crop) svg:hover {
+      fill: @color-pink;
+      cursor: default;
     }
   }
 
@@ -184,39 +205,62 @@
   }
 
   .upload__button-group {
-    padding: 67px 14px 0 0;
+    padding: 68px 14px 0 0;
     margin: 0;
     border-top: 0;
   }
 
-  .upload__button:not(:last-child) {
-    margin-bottom: 25px;
+  .upload__button {
+    &:not(:last-child) {
+      margin-bottom: 25px;
+
+      &:hover {
+        background-color: @color-pink;
+        color: #ffffff;
+      }
+
+      &:active {
+        color: rgba(255, 255, 255, 0.3);
+      }
+    }
+
+    &--reset {
+      &:hover {
+        border-color: #b5b9be;
+        color: #b5b9be;
+      }
+
+      &:active {
+        background-color: #b5b9be;
+        color: rgba(255, 255, 255, 0.3);
+      }
+    }
   }
 }
 
 @media (min-width: @desktop-width) {
   .upload__form {
     background-color: transparent;
-    margin-bottom: 31px;
+    margin-bottom: 28px;
   }
 
   .upload__wrapper {
     width: 940px;
-    padding: 58px 60px 58px 80px;
+    padding: 57px 60px 58px 80px;
     background-color: @color-gray;
   }
 
   .upload__list-wrapper {
-    width: 410px;
+    width: 412px;
     margin-top: -3px;
   }
 
   .upload__item {
-    margin: 0 0 16px;
-    padding-bottom: 9px;
+    margin: 0 0 12px;
+    padding-bottom: 10px;
 
     &.upload__item:last-child {
-      padding: 2px 0 19px;
+      padding: 6px 0 18px;
       margin: 0;
     }
   }
@@ -228,21 +272,21 @@
   }
 
   .upload__field {
-    & + label {
-      width: 48px;
-      height: 48px;
+    width: 48px;
+
+    &--fill {
+      width: 49px;
     }
 
-    &--contrast + label {
-      width: 32px;
-      height: 32px;
-      margin: 0 8px;
+    &--contrast {
+      width: 37px;
+      margin-left: 3px;
     }
   }
 
   .upload__slider {
     width: 288px;
-    margin: -3px 0 0 14px;
+    margin: -3px 0 0 41px;
   }
 
   .upload__button-group {

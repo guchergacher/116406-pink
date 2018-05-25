@@ -1,7 +1,8 @@
 .price {
-  background-color: @color-gray;
+  background: @color-gray url("../img/bg-triangle-white.svg") no-repeat;
+  background-size: 100% auto;
   text-align: center;
-  padding: 93px 0 42px;
+  padding: 90px 0 40px;
   overflow: hidden;
 }
 
@@ -14,8 +15,9 @@
 
 .price__item {
   flex-shrink: 0;
-  width: 280px;
+  width: 279px;
   border: 1px solid #e5e5e5;
+  border-top-color: #f2f2f2;
 
   &--title {
     display: none;
@@ -23,8 +25,30 @@
 }
 
 .price__info {
+  position: relative;
   background-color: @color-default;
   padding: 18px 0 21px;
+
+  &--hit::after {
+    content: "Хит";
+    position: absolute;
+    top: 12px;
+    left: 9px;
+    color: #ffffff;
+    text-transform: uppercase;
+    transform: rotate(-46deg);
+  }
+
+  &--hit::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -2px;
+    width: 74px;
+    height: 73px;
+    background: url("../img/bg-hit.svg") no-repeat;
+    background-size: 100% auto;
+  }
 }
 
 .price__title {
@@ -53,19 +77,26 @@
 }
 
 .price__add {
-  padding: 20px 60px 22px 21px;
+  padding: 22px 60px 20px 21px;
   font-size: 14px;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.25;
   text-transform: uppercase;
+  background: url("../img/icon-no.svg") no-repeat 230px center;
+  background-size: 28px auto;
 
   &:not(:last-child) {
     border-bottom: 2px solid #e5e5e5;
   }
+
+  &--check {
+    background: url("../img/icon-yes.svg") no-repeat 230px center;
+    background-size: 31px auto;
+  }
 }
 
 .price__buttons {
-  margin-top: 25px;
+  margin-top: 32px;
 }
 
 .price__button {
@@ -74,7 +105,7 @@
 
 @media (min-width: @tablet-width) {
   .price {
-    padding: 85px 0 67px;
+    padding: 87px 0 66px;
   }
 
   .price__item {
@@ -89,11 +120,27 @@
       .price__features {
         border: 1px solid #e5e5e5;
       }
+
+      .price__add {
+        background-image: none;
+      }
     }
   }
 
   .price__info {
     padding: 15px 0 12px;
+
+    &--hit::before {
+      left: 0;
+      width: 60px;
+      height: 60px;
+      background-image: url("../img/bg-hit-tablet.svg");
+    }
+
+    &--hit::after {
+      top: 4px;
+      left: 7px;
+    }
   }
 
   .price__title {
@@ -109,6 +156,7 @@
     min-height: 47px;
     padding: 14px 15px;
     text-transform: none;
+    background-position: center center;
 
     span {
       display: none;
@@ -127,6 +175,17 @@
 
   .price__info {
     padding: 17px 0 20px;
+
+    &--hit::after {
+      top: 11px;
+      left: 12px;
+    }
+
+    &--hit::before {
+      width: 74px;
+      height: 73px;
+      background-image: url("../img/bg-hit.svg");
+    }
   }
 
   .price__title {

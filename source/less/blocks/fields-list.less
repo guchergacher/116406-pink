@@ -1,5 +1,5 @@
 .fields-list__item {
-  margin-bottom: 17px;
+  margin-bottom: 16px;
 }
 
 .fields-list__label {
@@ -14,7 +14,7 @@
 .fields-list__field {
   display: block;
   width: 100%;
-  padding: 16px 20px;
+  padding: 16px 19px;
   border: 2px solid #e5e5e5;
   font-family: inherit;
   font-size: 18px;
@@ -30,6 +30,15 @@
     opacity: 1;
     color: inherit;
   }
+
+  &:hover {
+    border-color: #283645;
+  }
+
+  &:focus {
+    border-color: @color-pink;
+    outline: 0;
+  }
 }
 
 textarea.fields-list__field {
@@ -40,12 +49,30 @@ textarea.fields-list__field {
   .fields-list__item {
     display: flex;
     align-items: center;
-    margin-bottom: 51px;
+    margin-bottom: 50px;
 
     &--date {
+      position: relative;
       flex-direction: column;
       align-items: flex-start;
       margin-bottom: 28px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 2px;
+        right: 2px;
+        width: 62px;
+        height: 60px;
+      }
+
+      &:first-child::before {
+        background: #e5e5e5 url("../img/icon-phone.svg") no-repeat center center;
+      }
+
+      &:last-child::before {
+        background: #e5e5e5 url("../img/icon-mail.svg") no-repeat center center;
+      }
 
       .fields-list__field {
         width: 100%;
@@ -53,7 +80,7 @@ textarea.fields-list__field {
 
       .fields-list__label {
         order: 2;
-        margin: 11px 0 0 20px;
+        margin: 9px 0 0 20px;
       }
     }
   }
@@ -73,12 +100,9 @@ textarea.fields-list__field {
 }
 
 @media (min-width: @desktop-width) {
-  .fields-list--date {
-    display: flex;
-    justify-content: space-between;
-  }
-
   .fields-list__item {
+    margin-bottom: 51px;
+
     &--area {
       margin-bottom: 45px;
     }
@@ -91,6 +115,11 @@ textarea.fields-list__field {
         margin-top: 9px;
       }
     }
+  }
+
+  .fields-list--date {
+    display: flex;
+    justify-content: space-between;
   }
 
   textarea.fields-list__field {

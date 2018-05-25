@@ -2,20 +2,42 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Пинк</title>
-    <link href="css/style.css" rel="stylesheet">
+    <link rel="preload" href="fonts/opensans.woff2" as="font">
+    <link rel="preload" href="fonts/opensansbold.woff2" as="font">
+    <link rel="preload" href="fonts/opensanslight.woff2" as="font">
+    <link rel="preload" href="css/style.min.css" as="style">
+    <link href="css/style.min.css" rel="stylesheet">
   </head>
   <body>
+    <div style="display:none;">
+      <include src="build/img/sprite.svg"></include>
+    </div>
     <header class="header">
       <div class="header__wrapper">
         <a class="header__logo">
-          <img src="img/logo-pink-white-mobile.svg" width="74" height="23" alt="Логотип Пинк">
+          <svg class="header__logo-img" width="74" height="23">
+            <g class="header__img-wrapper">
+              <use xlink:href="#sprite-logo-pink-white-mobile"></use>
+            </g>
+            <g class="header__img-wrapper">
+              <use xlink:href="#sprite-logo-pink-white-tablet"></use>
+            </g>
+            <g class="header__img-wrapper">
+              <use xlink:href="#sprite-logo-pink-white-desktop"></use>
+            </g>
+          </svg>
         </a>
         <nav class="header__nav">
           <button class="header__button" type="button">
-            <span class="visually-hidden">Закрыть</span>
+            <span class="visually-hidden">Закрыть / Открыть меню</span>
+            <svg class="header__button-cross" width="24" height="24">
+              <use xlink:href="#sprite-menu-cross"></use>
+            </svg>
+            <svg class="header__button-burger" width="50" height="24">
+              <use xlink:href="#sprite-menu-burger"></use>
+            </svg>
           </button>
           <ul class="header__list">
             <li class="header__item">
@@ -28,7 +50,7 @@
               <a class="header__link" href="form.html">Конкурс</a>
             </li>
             <li class="header__item">
-              <a class="header__link" href="https://www.htmlacademy.ru">HTML Academy</a>
+              <a class="header__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
             </li>
           </ul>
         </nav>
@@ -38,24 +60,24 @@
       <h1 class="visually-hidden">Пинк</h1>
       <section class="app">
         <h2 class="visually-hidden">Приложение</h2>
-        <div class="container">
+        <div class="app__container container">
           <div class="app__wrapper">
             <p class="app__slogan">Взгляните на&nbsp;жизнь иначе!</p>
             <a class="app__link" href="https://www.apple.com" target="_blank">Скачать приложение</a>
             <ul class="app__support">
               <li class="app__item app__item--apple">
                 <a href="https://www.apple.com" target="_blank">
-                  <img src="/img/logo-apple.svg" width="47" height="56" alt="Apple">
+                  <img src="img/logo-apple.svg" width="47" height="56" alt="Apple">
                 </a>
               </li>
               <li class="app__item app__item--android">
                 <a href="https://play.google.com" target="_blank">
-                  <img src="/img/logo-android.svg" width="47" height="45" alt="Android">
+                  <img src="img/logo-android.svg" width="42" height="47" alt="Android">
                 </a>
               </li>
               <li class="app__item app__item--windows">
                 <a href="https://www.microsoft.com/ru-ru/store/b/home" target="_blank">
-                  <img src="/img/logo-microsoft.svg" width="44" height="41" alt="Windows">
+                  <img src="img/logo-microsoft.svg" width="44" height="42" alt="Windows">
                 </a>
               </li>
             </ul>
@@ -71,27 +93,29 @@
             <p class="presentation__slogan">Нам есть, что вам<br>предложить!</p>
           </div>
         </div>
-        <div class="presentation__comment-wrapper container">
-          <ul class="presentation__comment">
-            <li class="presentation__comment-item">
-              <b class="presentation__comment-title">Поднимает настроение</b>
-              <p class="presentation__comment-text">Приложение позволит вам победить осеннюю хандру и&nbsp;депрессию буквально в несколько кликов!</p>
-            </li>
-            <li class="presentation__comment-item">
-              <b class="presentation__comment-title">Меняет мир вокруг</b>
-              <p class="presentation__comment-text">Сделайте снимок&nbsp;и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
-            </li>
-            <li class="presentation__comment-item">
-              <b class="presentation__comment-title">Заводит новых друзей</b>
-              <p class="presentation__comment-text">Ставьте лайки, комментируйте, делитесь фотографиями с&nbsp;друзьями и&nbsp;заводите новых</p>
-            </li>
-          </ul>
+        <div class="presentation__comment-wrapper">
+          <div class="container">
+            <ul class="presentation__comment">
+              <li class="presentation__comment-item">
+                <b class="presentation__comment-title">Поднимает настроение</b>
+                <p class="presentation__comment-text">Приложение позволит вам победить осеннюю хандру и&nbsp;депрессию буквально в несколько кликов!</p>
+              </li>
+              <li class="presentation__comment-item">
+                <b class="presentation__comment-title">Меняет мир вокруг</b>
+                <p class="presentation__comment-text">Сделайте снимок&nbsp;и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+              </li>
+              <li class="presentation__comment-item">
+                <b class="presentation__comment-title">Заводит новых друзей</b>
+                <p class="presentation__comment-text">Ставьте лайки, комментируйте, делитесь фотографиями с&nbsp;друзьями и заводите новых</p>
+              </li>
+            </ul>
+          </div>
         </div>
         <div class="presentation__wrapper">
           <div class="presentation__group container">
             <div class="presentation__group-wrapper">
               <b class="presentation__title">Эффект на&nbsp;24&nbsp;часа!</b>
-              <p class="presentation__text">Британские ученые провели исследования и&nbsp;доказали, что положительный эффект от&nbsp;использования приложения длится целые сутки!</p>
+              <p class="presentation__text">Британские ученые провели исследования и&nbsp;доказали, что&nbsp;положительный эффект от&nbsp;использования приложения длится целые сутки!</p>
               <a class="presentation__link" href="#">Узнать больше об исследовании</a>
             </div>
           </div>
@@ -140,6 +164,14 @@
               <span class="visually-hidden">Слайд 3</span>
             </button>
           </div>
+          <div class="review__arrow-buttons">
+            <button class="review__arrow-button review__arrow-button--prev" type="button">
+              <span class="visually-hidden">Назад</span>
+            </button>
+            <button class="review__arrow-button review__arrow-button--next" type="button">
+              <span class="visually-hidden">Вперёд</span>
+            </button>
+          </div>
         </div>
       </section>
       <section class="price">
@@ -154,7 +186,7 @@
               </ul>
             </li>
             <li class="price__item">
-              <div class="price__info price__info--hit">
+              <div class="price__info">
                 <h3 class="price__title">База</h3>
                 <p class="price__value">1,99 usd</p>
               </div>
@@ -188,7 +220,7 @@
               </ul>
             </li>
             <li class="price__item">
-              <div class="price__info price__info--hit">
+              <div class="price__info">
                 <h3 class="price__title">Анлим</h3>
                 <p class="price__value">9,99 usd</p>
               </div>
@@ -210,7 +242,7 @@
               <span class="visually-hidden">Слайд 1</span>
             </button>
             <button class="price__button price__button--current" data-value="2" type="button">
-              <span class="visually-hidden price__button--current">Слайд 2</span>
+              <span class="visually-hidden">Слайд 2</span>
             </button>
             <button class="price__button" data-value="3" type="button">
               <span class="visually-hidden">Слайд 3</span>
@@ -220,36 +252,48 @@
       </section>
       <section class="contacts">
         <h2 class="visually-hidden">Контакты</h2>
-        <div class="container">
-          <p class="contacts__slogan">Остались вопросы?<br>Свяжитесь с нами!</p>
-          <ul class="contacts__list">
-            <li class="contacts__item">
-              <b class="contacts__title">Звоните:</b>
-              <p class="contacts__text">
-                <a href="tel:+78125556666">+7 (812) 555-66-66</a>
-              </p>
-            </li>
-            <li class="contacts__item">
-              <b class="contacts__title">Пишите:</b>
-              <p class="contacts__text">
-                <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-              </p>
-            </li>
-            <li class="contacts__item">
-              <b class="contacts__title">Приезжайте в гости:</b>
-              <p class="contacts__text">ул. Большая<br>Конюшенная, 19/8</p>
-            </li>
-          </ul>
+        <div class="contacts__wrapper">
+          <div class="container">
+            <p class="contacts__slogan">Остались вопросы?<br>Свяжитесь с нами!</p>
+            <ul class="contacts__list">
+              <li class="contacts__item">
+                <b class="contacts__title">Звоните:</b>
+                <p class="contacts__text">
+                  <a href="tel:+78125556666">+7 (812) 555-66-66</a>
+                </p>
+              </li>
+              <li class="contacts__item">
+                <b class="contacts__title">Пишите:</b>
+                <p class="contacts__text">
+                  <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+                </p>
+              </li>
+              <li class="contacts__item">
+                <b class="contacts__title">Приезжайте в гости:</b>
+                <p class="contacts__text">ул. Большая<br>Конюшенная, 19/8</p>
+              </li>
+            </ul>
+          </div>
         </div>
-        <a class="contacts__wrapper" href="#" target="_blank">
-          <img class="contacts__map" src="img/bg-map-mobile@1x.png" width="320" height="645" alt="Карта">
-        </a>
+        <div class="contacts__map-wrapper">
+          <a class="contacts__link" href="https://goo.gl/maps/wkbByxsqTeA2" target="_blank">
+            <span class="visually-hidden">Карта</span>
+          </a>
+          <iframe class="contacts__frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.598942412426!2d30.320894616494105!3d59.93879686904746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1526203735183" width="320" height="612" allowfullscreen></iframe>
+        </div>
       </section>
     </main>
     <footer class="footer footer--hide">
       <div class="footer__wrapper container">
         <a class="footer__logo-link">
-          <img src="img/logo-pink-blue-mobile.svg" width="147" height="40" alt="Логотип Пинк">
+          <svg class="footer__logo-img" width="146" height="40">
+            <g class="footer__img-wrapper">
+              <use xlink:href="#sprite-logo-pink-blue-mobile"></use>
+            </g>
+            <g class="footer__img-wrapper">
+              <use xlink:href="#sprite-logo-pink-blue-desktop"></use>
+            </g>
+          </svg>
         </a>
         <ul class="footer__social social">
           <li class="social__item">
@@ -270,9 +314,14 @@
         </ul>
         <a class="footer__develop" href="https://htmlacademy.ru/intensive/adaptive">
           Разработано
-          <img src="img/logo-htmlacademy.svg" width="27" height="34" alt="Логотип Академии">
+          <svg class="footer__copy-icon" width="28" height="34">
+            <use xlink:href="#sprite-logo-htmlacademy"></use>
+          </svg>
         </a>
       </div>
     </footer>
+
+    <script src="js/picturefill.min.js"></script>
+    <script src="js/script.min.js"></script>
   </body>
 </html>
