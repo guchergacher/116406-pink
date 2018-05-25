@@ -61,11 +61,6 @@
   display: block;
   fill: #ffffff;
 
-  &--sm,
-  &--md {
-    display: none;
-  }
-
   &:hover {
     fill: @color-pink;
   }
@@ -73,6 +68,15 @@
   &:active {
     fill: #ffffff;
     opacity: 0.3;
+  }
+}
+
+.header__img-wrapper {
+  display: block;
+
+  &:nth-child(2),
+  &:nth-child(3) {
+    display: none;
   }
 }
 
@@ -163,11 +167,16 @@
   }
 
   .header__logo-img {
-    &--xs {
+    width: 146px;
+    height: 40px;
+  }
+
+  .header__img-wrapper {
+    &:nth-child(1) {
       display: none;
     }
 
-    &--sm {
+    &:nth-child(2) {
       display: block;
     }
   }
@@ -219,12 +228,12 @@
     margin: -16px 0 0;
   }
 
-  .header__logo-img {
-    &--sm {
+  .header__img-wrapper {
+    &:nth-child(2) {
       display: none;
     }
 
-    &--md {
+    &:nth-child(3) {
       display: block;
     }
   }

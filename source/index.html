@@ -2,9 +2,12 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Пинк</title>
+    <link rel="preload" href="fonts/opensans.woff2" as="font">
+    <link rel="preload" href="fonts/opensansbold.woff2" as="font">
+    <link rel="preload" href="fonts/opensanslight.woff2" as="font">
+    <link rel="preload" href="css/style.min.css" as="style">
     <link href="css/style.min.css" rel="stylesheet">
   </head>
   <body>
@@ -14,14 +17,16 @@
     <header class="header">
       <div class="header__wrapper">
         <a class="header__logo">
-          <svg class="header__logo-img header__logo-img--md" width="146" height="40">
-            <use xlink:href="#sprite-logo-pink-white-desktop"></use>
-          </svg>
-          <svg class="header__logo-img header__logo-img--sm" width="146" height="40">
-            <use xlink:href="#sprite-logo-pink-white-tablet"></use>
-          </svg>
-          <svg class="header__logo-img header__logo-img--xs" width="74" height="23">
-            <use xlink:href="#sprite-logo-pink-white-mobile"></use>
+          <svg class="header__logo-img" width="74" height="23">
+            <g class="header__img-wrapper">
+              <use xlink:href="#sprite-logo-pink-white-mobile"></use>
+            </g>
+            <g class="header__img-wrapper">
+              <use xlink:href="#sprite-logo-pink-white-tablet"></use>
+            </g>
+            <g class="header__img-wrapper">
+              <use xlink:href="#sprite-logo-pink-white-desktop"></use>
+            </g>
           </svg>
         </a>
         <nav class="header__nav">
@@ -281,11 +286,13 @@
     <footer class="footer footer--hide">
       <div class="footer__wrapper container">
         <a class="footer__logo-link">
-          <svg class="footer__logo-img footer__logo-img--md" width="146" height="40">
-            <use xlink:href="#sprite-logo-pink-blue-desktop"></use>
-          </svg>
-          <svg class="footer__logo-img footer__logo-img--xs" width="146" height="40">
-            <use xlink:href="#sprite-logo-pink-blue-mobile"></use>
+          <svg class="footer__logo-img" width="146" height="40">
+            <g class="footer__img-wrapper">
+              <use xlink:href="#sprite-logo-pink-blue-mobile"></use>
+            </g>
+            <g class="footer__img-wrapper">
+              <use xlink:href="#sprite-logo-pink-blue-desktop"></use>
+            </g>
           </svg>
         </a>
         <ul class="footer__social social">

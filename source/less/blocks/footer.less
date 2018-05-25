@@ -19,10 +19,6 @@
   display: block;
   fill: @color-default;
 
-  &--md {
-    display: none;
-  }
-
   &:hover {
     fill: @color-pink;
   }
@@ -30,6 +26,14 @@
   &:active {
     fill: @color-default;
     opacity: 0.3;
+  }
+}
+
+.footer__img-wrapper {
+  display: block;
+
+  &:last-child {
+    display: none;
   }
 }
 
@@ -92,13 +96,13 @@
     margin-top: -20px;
   }
 
-  .footer__logo-img {
-    &--md {
-      display: block;
+  .footer__img-wrapper {
+    &:first-child {
+      display: none;
     }
 
-    &--xs {
-      display: none;
+    &:last-child {
+      display: block;
     }
   }
 
