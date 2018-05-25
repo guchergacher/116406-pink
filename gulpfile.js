@@ -15,6 +15,7 @@ var posthtml = require("gulp-posthtml");
 var include = require("posthtml-include");
 var run = require("run-sequence");
 var del = require("del");
+var uglify = require("gulp-uglify");
 
 gulp.task("clean", function() {
   return del("build");
@@ -105,8 +106,10 @@ gulp.task("build", function(done) {
     "copy",
     "style",
     "webp",
+    "images",
     "sprite",
     "html",
+    "js",
     done
   );
 });

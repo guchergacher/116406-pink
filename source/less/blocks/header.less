@@ -1,6 +1,46 @@
 .header {
   background-color: @color-default;
   color: #ffffff;
+
+  &--js {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+
+    .header__logo {
+      margin-bottom: 22px;
+    }
+
+    .header__list {
+      display: none;
+    }
+
+    .header__button-cross {
+      display: none;
+    }
+
+    .header__button-burger {
+      display: block;
+    }
+  }
+
+  &--show {
+    background-color: @color-default;
+
+    .header__list {
+      display: block;
+    }
+
+    .header__button-cross {
+      display: block;
+    }
+
+    .header__button-burger {
+      display: none;
+    }
+  }
 }
 
 .header__wrapper {
@@ -105,6 +145,10 @@
 }
 
 @media (min-width: @tablet-width) {
+  .header--js .header__logo {
+    margin-bottom: 42px;
+  }
+
   .header__wrapper {
     position: relative;
     padding-top: 28px;
@@ -129,13 +173,28 @@
   }
 }
 
+
 @media (min-width: @desktop-width) {
   .header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
     background-color: rgba(0, 0, 0, 0.3);
+
+    &--js {
+      .header__logo {
+        margin: -16px 0 0;
+      }
+
+      .header__list {
+        display: flex;
+      }
+
+      .header__button-cross {
+        display: none;
+      }
+
+      .header__button-burger {
+        display: none;
+      }
+    }
   }
 
   .header__wrapper {

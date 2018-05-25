@@ -15,6 +15,10 @@
       background-size: 258px auto, 705px auto;
     }
   }
+
+  &--js::before {
+    height: 460px;
+  }
 }
 
 .app__wrapper {
@@ -99,6 +103,12 @@
 
     &::before {
       display: none;
+    }
+
+    &--js {
+      min-height: 729px;
+      padding-top: 110px;
+      background-position: -20px bottom, center 0;
     }
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
