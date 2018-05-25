@@ -106,7 +106,6 @@ gulp.task("build", function(done) {
     "copy",
     "style",
     "webp",
-    "images",
     "sprite",
     "html",
     "js",
